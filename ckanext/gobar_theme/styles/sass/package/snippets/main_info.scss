@@ -1,0 +1,46 @@
+#pkg-main-info {
+  #pkg-title-and-desc {
+    h1.pkg-title {
+      margin: 50px 0 0 0;
+      color: $dark-blue;
+      font-size: 24px;
+    }
+    .edit-button {
+      float: right;
+    }
+    p.pkg-author {
+      color: $light-grey;
+      font-size: 13px;
+      svg {
+        width: 1em;
+        height: 1em;
+        path {
+          fill: $light-grey;
+        }
+        &:hover path {
+          fill: $dark-blue;
+        }
+      }
+    }
+    p.pkg-notes {
+      margin-bottom: 50px;
+      font-size: 14px;
+    }
+    h2.pkg-resources-title {
+      color: $grey;
+      border-bottom: solid 1px $light-grey;
+      font-size: 17px;
+    }
+    .contact {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  #pkg-resources {
+    padding-bottom: 20px;
+    border-bottom: solid 1px $light-grey;
+    @include breakpoint-md {
+      margin-bottom: 50px;
+    }
+  }
+}

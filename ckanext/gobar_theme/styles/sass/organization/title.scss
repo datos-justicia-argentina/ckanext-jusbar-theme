@@ -1,0 +1,22 @@
+/* Extiende ../home/title */
+
+#title.organization-title {
+  padding-bottom: 40px;
+
+  #title-container {
+    h1 {
+      font-size: 35px;
+      @include breakpoint-sm {
+        font-size: 50px;
+      }
+    }
+    .description {
+      margin: 0;
+    }
+  }
+  #stats {
+    .stats-legend {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{% set stats = h.get_site_statistics() %}
+
+<div id="title" class="organization-title container-fluid">
+    {% snippet "title_background.html" %}
+    <div class="col-xs-12 col-md-10 col-md-offset-1">
+        <div id="title-container" class="col-xs-12 col-md-6">
+            <h1>Organizaciones</h1>
+
+            <p class="description">
+               Listado de los organismos que compartieron sus datos para su publicación en formatos abiertos.
+            </p>
+        </div>
+        <div id="stats" class="col-xs-12 col-md-4 col-md-offset-2">
+            <div>
+                <p class="stat organizations">{{ "%03d" % h.organizations_with_packages() }}</p>
+
+                <p class="stats-legend">ORGANIZACIONES</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% resource 'gobar_js/background_ie.js' %}

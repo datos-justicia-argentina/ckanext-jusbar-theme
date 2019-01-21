@@ -1,0 +1,98 @@
+#pkg-secondary-info {
+  background: #fafafa;
+  h2.secondary-info-title {
+    color: $dark-blue;
+    margin-top: 58px;
+    font-size: 17px;
+    border-bottom: solid 1px $light-grey;
+  }
+
+  #info-container {
+    font-size: 14px;
+    .row {
+      border-bottom: 1px solid $inactive;
+      margin-bottom: 10px;
+
+      &.group-row {
+        overflow: visible;
+      }
+
+      .title {
+        font-weight: 500;
+        margin-bottom: 10px;
+        padding: 0;
+      }
+      .value {
+        margin-bottom: 10px;
+        padding: 0 0 0 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        p.pkg-maintainer {
+          svg {
+            width: 1em;
+            height: 1em;
+            path {
+              fill: $light-grey;
+            }
+            &:hover path {
+              fill: $dark-blue;
+            }
+          }
+        }
+
+        .group-img-container {
+          display: inline-block;
+          position: relative;
+
+          svg.group-image, img.group-image {
+            width: 30px;
+            height: 30px;
+            margin: 0 0 5px 5px;
+            &:hover {
+              path {
+                fill: $dark-blue;
+              }
+            }
+          }
+
+          .svg-tooltip {
+            position: absolute;
+            display: inline-block;
+            right: -99999px;
+            top: -70%;
+            .tooltip-text {
+              padding: 4px;
+              background: $grey;
+              color: white;
+              white-space: nowrap;
+              font-size: 10px;
+              opacity: 0;
+              @include transition-delay(400ms);
+              @include transition-property(opacity);
+              @include transition-timing-function(linear);
+              @include transition-duration(150ms);
+            }
+          }
+
+          svg.group-image:hover + .svg-tooltip {
+            right: -25%;
+            .tooltip-text {
+              opacity: 1;
+            }
+          }
+        }
+
+        p.pkg-tag {
+          a {
+            color: $grey;
+            &:hover {
+              color: $dark-blue;
+            }
+          }
+          margin: 0 0 5px 0;
+        }
+      }
+    }
+
+  }
+}

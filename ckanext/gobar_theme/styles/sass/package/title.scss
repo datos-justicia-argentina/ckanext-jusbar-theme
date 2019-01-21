@@ -1,0 +1,17 @@
+#title.package-title {
+  padding-bottom: 40px;
+  #title-container {
+    .description {
+      margin: 0;
+    }
+  }
+  #stats {
+    padding: 10px 0;
+    > div {
+      padding: 0;
+      .stats-legend {
+        margin: 0;
+      }
+    }
+  }
+}

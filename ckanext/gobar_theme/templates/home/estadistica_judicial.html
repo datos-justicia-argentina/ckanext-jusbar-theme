@@ -1,0 +1,62 @@
+{% extends "gobar_page.html" %}
+
+{% block subtitle %} - Estadística judicial{% endblock %}
+
+{% block content %}
+    {% snippet "static/static_nav_bar.html", active_button='nav-estadistica', sub_active_button='legal-access' %}
+
+    <div id="legal-access-container" class="container-fluid gobar-static-container">
+      <div id="legal-access" class="col-xs-12 col-md-10 col-md-offset-1 gobar-static">
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <h2>Estadsística judicial </h2>
+          <h3>Presentaciones de la Conferencia Justicia Abierta (02/12/2016)</h3>
+          <div class="table-wrapper">
+
+            <a href="https://github.com/datos-justicia-argentina/Presentacion-Datos-Abiertos-en-Justicia-Criminal---Sunil-Choenni" target = "_blank">
+                <div class="featured-card">
+                    <h2>Datos Abiertos en Justicia Criminal - Sunil Choenni</h2>
+
+                    <!--<h3>{{ h.cut_text(featured_pkg.author, 150) }}</h3> -->
+
+                    <p>Presentación de Sunil Choenni en el panel “Datos judiciales abiertos” en la Conferencia Justicia Abierta, que tuvo lugar el viernes 2 de diciembre de 2016 en la Facultad de Derecho de la UBA.
+                    Sunil Choenni tiene un doctorado en tecnología de bases de datos de la Universidad de Twente y una maestría en informática teórica de la Universidad de Tecnología de Delft. Dirige el departamento de Gestión de Información
+                    Estadística y Análisis de Políticas del Centro de Investigación y Documentación (WODC) del Ministerio de Seguridad y Justicia de los Países Bajos
+                    </p>
+                </div>
+            </a>
+            <div class="table-spacer"></div>
+            <a href="https://github.com/datos-justicia-argentina/Informacion-Legal-Abierta---Clemens-Wass" target = "_blank">
+              <div class="featured-card">
+                  <h2>Información Legal Abierta - Clemens Wass</h2>
+
+                  <!--<h3>{{ h.cut_text(featured_pkg.author, 150) }}</h3> -->
+
+                  <p>Presentación de Clemens Wass en el panel “Datos judiciales abiertos” en la Conferencia Justicia Abierta, que tuvo lugar el viernes 2 de diciembre de 2016 en la Facultad de Derecho de la UBA.
+                    Clemens Wass es MBL, MBA, co-fundador y CEO de openlaws. Licenciado en derecho, derecho de los negocios Salzburg University y Salzburg Management Business School) y administración de empresas. Cuenta con diez años de experiencia práctica en el área de Derecho e Informática Jurídica.
+                  </p>
+              </div>
+            </a>
+            <div class="table-spacer"></div>
+          </div>
+          <div class="table-wrapper">
+            <a href="https://github.com/datos-justicia-argentina/Presentacion-de-Estadisticas-Judiciales---Carlos-Gregorio" target = "_blank">
+              <div class="featured-card">
+                <h2>Estadísticas judiciales - Carlos Gregorio</h2>
+
+                <!--<h3>{{ h.cut_text(featured_pkg.author, 150) }}</h3> -->
+
+                <p>Presentación de Carlos Gregorio en el panel “Datos judiciales abiertos” en la Conferencia Justicia Abierta, que tuvo lugar el viernes 2 de diciembre de 2016 en la Facultad de Derecho de la UBA.
+
+                  Carlos Gregorio es Doctor en Derecho y Ciencias Sociales y Licenciado en Matemáticas por la Universidad de Buenos Aires. Actualmente es asesor del Programa Justicia Abierta del Ministerio de Justicia y Derechos Humanos de la Nación; profesor de post-grado de la Universidad Sergio Arboleda, Colombia; e investigador del Instituto de Investigación para la Justicia de Argentina.
+                </p>
+              </div>
+            </a>
+            <div class="table-spacer"></div>
+            <div class="empty-card">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+{% endblock %}

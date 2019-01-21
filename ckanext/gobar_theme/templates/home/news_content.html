@@ -1,0 +1,21 @@
+<div id="featured-content-container" class="container-fluid">
+    <div id="featured-content" class="hidden-xs col-sm-10 col-sm-offset-1">
+        <div class="col-xs-12 col-lg-10 col-lg-offset-1 no-padding">
+            <h2>Datasets destacados</h2>
+            {% for featured_row in c.featured_packages %}
+            {% endfor %}
+			<div class="table-wrapper">
+                        <a href="#">
+                            <div class="featured-card">
+                                <h2>Título Presentación</h2>
+
+                                <!--<h3>{{ h.cut_text(featured_pkg.author, 150) }}</h3>-->
+
+                                <p>Descripción Presentación. Descripción Presentación. Descripción Presentación. </p>
+                            </div>
+                        </a>
+                        
+                </div>
+        </div>
+    </div>
+</div>

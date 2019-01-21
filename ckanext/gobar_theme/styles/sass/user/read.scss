@@ -1,0 +1,6 @@
+#user-datasets-container {
+  @include base-container();
+  #user-datasets {
+    @include base-content();
+  }
+}

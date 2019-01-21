@@ -1,0 +1,73 @@
+.pkg-container {
+  position: relative;
+  $file-img-width: 40px;
+  .pkg-file-img {
+    position: absolute;
+    width: $file-img-width;
+    $height: $file-img-width*1.26;
+    height: $height;
+    top: 0;
+    left: 0;
+    @include svgFormatColors();
+    p {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: $height;
+      $vcenter-offset: 4px;
+      line-height: $height + $vcenter-offset;
+      $font-size: 12px;
+      font-size: $font-size;
+      margin: 0;
+      text-align: center;
+      color: white;
+      font-weight: 500;
+    }
+  }
+  $right-img-size: 50px;
+  .pkg-actions {
+    display: inline-block;
+    float: right;
+    margin: 0 10px 10px 10px;
+    svg {
+      width: $right-img-size;
+      height: $right-img-size;
+      display: block;
+      padding: 0 10px 10px 10px;
+      @include breakpoint-sm {
+        display: inline;
+      }
+      path {
+        fill: $light-grey;
+      }
+    }
+    a:hover {
+      svg {
+        path {
+          fill: $dark-blue;
+        }
+      }
+    }
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .package-info {
+    padding: 0 (2*$right-img-size + 10px) 0 ($file-img-width + 10px);
+    color: $grey;
+    min-height: $right-img-size;
+    h3 {
+      margin: 5px 0 6px 0;
+      @include breakpoint-sm {
+        margin-top: 30px;
+      }
+      font-size: 16px;
+    }
+    p {
+      font-size: 13px;
+    }
+  }
+}

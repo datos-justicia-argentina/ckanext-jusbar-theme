@@ -1,0 +1,58 @@
+// Para compilar correr (parado en esta carpeta):
+// sass style.scss:../css/gobar_style.css
+// Para compilar y quedar escuchando cambios a los archivos (para desarrollo) correr:
+// sass --watch style.scss:../css/gobar_style.css
+@import 'fonts';
+
+body {
+  background: #fff;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 400;
+  padding: 0;
+}
+
+a, a:hover {
+  text-decoration: none !important;
+}
+
+div.no-padding {
+  padding: 0;
+}
+
+div.svg-tooltip {
+  display: none;
+}
+
+.modal.in {
+  margin-top: 0;
+  top: 20%;
+  bottom: initial;
+  left: 50%;
+}
+
+@import 'utils/selective_bourbon';
+@import 'utils/colors';
+@import 'utils/mixins';
+@import 'utils/media_queries';
+
+@import 'header';
+@import 'footer';
+@import 'background';
+@import 'static';
+@import 'error';
+@import 'modals';
+@import 'home/index';
+@import 'user/login';
+@import 'user/read';
+@import 'organization/index';
+@import 'organization/title';
+@import 'organization/new_and_edit';
+@import 'package/search';
+@import 'package/title';
+@import 'package/read';
+@import 'package/resources';
+@import 'package/new_and_edit';
+@import 'package/resource_read';
+@import 'package/snippets/resource_item';
+@import 'group/new_and_edit';
+@import 'activity_streams/activity_streams_items';

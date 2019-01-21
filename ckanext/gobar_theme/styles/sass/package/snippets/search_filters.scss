@@ -1,0 +1,215 @@
+.filters-container {
+  background: #fafafa;
+  border-right: solid 1px $inactive;
+  margin-bottom: -99999px;
+  padding: 0 0 99999px 0;
+  z-index: 2;
+
+  position: absolute;
+  width: 100%;
+  max-width: 400px;
+  left: -100%;
+  @include transition-property(left);
+  @include transition-duration(400ms);
+  @include transition-timing-function(ease-in);
+  @include transition-delay(0s);
+
+  &.side-visible {
+    left: 0;
+  }
+
+  @include breakpoint-md {
+    position: relative;
+    left: 0;
+    max-width: none;
+    width: 33.33333333%;
+  }
+
+  .hide-filters-button {
+    color: $grey;
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+    i {
+      font-size: 14px;
+    }
+  }
+
+  .search-filter {
+    $side-padding: 15px;
+
+    @include transition-duration(300ms);
+    @include transition-delay(0s);
+    @include transition-property(opacity);
+    @include transition-timing-function(linear);
+
+    &.invisible {
+      opacity: 0;
+    }
+
+    h2.filter-title {
+      font-size: 16px;
+      font-weight: 500;
+      padding: 0 $side-padding;
+    }
+
+    p.filter-empty {
+      color: $light-grey;
+      font-size: 16px;
+      padding: 0 ($side-padding + 10px);
+    }
+
+    a.filter-show-less, a.filter-show-more {
+      color: $light-grey;
+      p {
+        padding: 5px ($side-padding + 10px);
+        text-align: center;
+        margin: 0;
+        background: transparent;
+        .arrow-up, .arrow-down {
+          width: 12px;
+          height: 12px;
+        }
+      }
+      &:hover {
+        color: $grey;
+        p {
+          background: $light-grey;
+          .arrow-up, .arrow-down {
+            path {
+              fill: $grey;
+            }
+          }
+        }
+      }
+    }
+
+    hr {
+      margin: 20px;
+      border: none;
+      border-top: solid 1px $inactive;
+    }
+
+    a.filter-show-more + hr, a.filter-show-less + hr {
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+
+      a {
+        color: inherit;
+        font-size: 14px;
+
+        li {
+          padding: 5px ($side-padding + 10px);
+          position: relative;
+          background: transparent;
+          @include transition-delay(0s);
+          @include transition-property(background);
+          @include transition-timing-function(linear);
+          @include transition-duration(150ms);
+          &:hover {
+            background: $light-grey;
+          }
+          .close-filter {
+            display: none;
+          }
+          &.active {
+            background: $light-blue;
+            border-left: solid 5px $dark-blue;
+            padding-left: $side-padding + 5px;
+            padding-right: $side-padding + 15px;
+            .close-filter {
+              display: inline-block;
+              position: absolute;
+              right: 5px;
+              top: 50%;
+              margin-top: -10px;
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .group-images {
+      padding: 0 25px;
+      .group-image-container {
+        width: 16.666666%;
+        display: inline-block;
+        padding: 4px;
+        text-align: center;
+        position: relative;
+        svg {
+          max-width: 35px;
+          max-height: 35px;
+          path {
+            fill: $inactive;
+          }
+        }
+        &.available {
+          svg {
+            path {
+              fill: $light-grey;
+            }
+          }
+          &:hover {
+            svg {
+              path {
+                fill: $dark-blue;
+              }
+            }
+          }
+        }
+        &.active {
+          svg {
+            path {
+              fill: $dark-blue;
+            }
+          }
+          &:hover {
+            svg {
+              path {
+                fill: $light-grey;
+              }
+            }
+          }
+        }
+
+        .svg-tooltip {
+          position: absolute;
+          display: inline-block;
+          left: -99999px;
+          .tooltip-text {
+            padding: 4px;
+            background: $grey;
+            color: white;
+            white-space: nowrap;
+            font-size: 10px;
+            opacity: 0;
+            @include transition-delay(400ms);
+            @include transition-property(opacity);
+            @include transition-timing-function(linear);
+            @include transition-duration(150ms);
+          }
+        }
+
+        &:hover {
+          .svg-tooltip {
+            left: -25%;
+            top: -50%;
+            .tooltip-text {
+              opacity: 1;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+}

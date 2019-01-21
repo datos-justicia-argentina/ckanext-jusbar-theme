@@ -1,0 +1,52 @@
+#footer {
+  padding: 0;
+  position: relative;
+  @include box-shadow(0 -2px 4px 0 rgba(220, 220, 220, 0.5));
+  #footer-spacer {
+    padding: 20px 0;
+
+    @include breakpoint-sm {
+      padding: 50px 0;
+    }
+
+    .footer-section {
+      color: $dark-blue;
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+
+      &.logo {
+        img {
+          max-width: 300px;
+		  max-height: 300px;
+          margin-bottom: 10px;
+        }
+      }
+
+      &.links-externos {
+        i {
+          font-size: 28px;
+          margin-left: 20px;
+        }
+        .ckan-link {
+          margin: 20px 0;
+          color: $light-grey;
+          .ckan-logo {
+            height: 22px;
+            vertical-align: bottom;
+            margin-left: 6px;
+          }
+        }
+      }
+
+      @include breakpoint-sm {
+        text-align: left;
+
+        &.links-externos {
+          text-align: right;
+        }
+      }
+
+    }
+  }
+}

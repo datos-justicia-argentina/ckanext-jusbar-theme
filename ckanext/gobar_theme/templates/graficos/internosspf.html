@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+<!-- TODO: buscar mejor forma de deshabilitar estos mensajes -->
+{% set messages = h.flash.pop_messages() %}
+
+{%- block page -%}
+
+    {%- block header %}
+        {% include "header.html" %}
+    {% endblock -%}
+
+    {%- block content %}
+	<br><br><br><br><br><br><br>
+	<h1>Internos del Servicio Penitenciario Federal - SPF</h1>
+	<br><br><br>
+	<img src="http://ckan-desarrollo.jus.gov.ar/graficos/internos01.png"></img><br>
+	
+    {% endblock -%}
+
+
+    {%- block footer %}
+        {% include "footer.html" %}
+    {% endblock -%}
+{%- endblock -%}
+
+{%- block scripts %}
+    {% resource 'base/main' %}
+    {% resource 'base/ckan' %}
+    {% resource 'gobar_js/console_message.js' %}
+    {% resource 'gobar_js/replace_svg.js' %}
+    {{ super() }}
+{% endblock -%}

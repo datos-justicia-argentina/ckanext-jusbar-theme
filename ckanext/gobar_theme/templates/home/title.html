@@ -1,0 +1,40 @@
+﻿{% set stats = h.get_site_statistics() %}
+
+<div id="title" class="container-fluid">
+    {% snippet "title_background.html" %}
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <div id="title-container" class="col-xs-12 col-md-6" style="margin-bottom:20px">
+            <h2 style="font-weight:300;font-size:33px;margin:19px 0 0 0;">Portal de</h2>
+			<h1 style="font-weight:400;font-size:50px;margin:0 0 14px 0;line-height:48px;">Datos Abiertos de la Justicia Argentina</h1>
+
+            <p class="description" style="margin-botton:30px;font-size:19px;letter-spacing:-0.1px;">Recursos libres y reutilizables acerca del sistema de justicia de la República Argentina</p>
+        </div>
+		<div id="title-container" class="col-xs-12 col-md-6">
+		&nbsp;
+		</div>
+        <div id="searcher" class="col-xs-8 col-xs-offset-2 col-md-5 col-md-offset-0 col-lg-4 no-padding" style="margin-top:10px">
+            <form class="module-content search-form" method="get"
+                  action="{% url_for controller='package', action='search' %}">
+                <input type="text" class="search" name="q" value="" autocomplete="off"
+                       placeholder="Buscar Dataset"/>
+                <button type="submit">
+                    <i class="icon-search"></i>
+                </button>
+            </form>
+        </div>
+        <div id="stats" class="hidden-xs col-sm-12 col-md-4 col-md-offset-2">
+            <div class="col-sm-4 col-sm-offset-2 col-md-12 col-md-offset-0">
+                <p class="stat">{{ "%03d" % stats.dataset_count }}</p>
+
+                <p class="stats-legend datasets">DATASETS</p>
+            </div>
+            <div class="col-sm-4 col-md-12">
+                <p class="stat organizations">{{ "%03d" % h.organizations_with_packages() }}</p>
+
+                <p class="stats-legend">ORGANIZACIONES</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% resource 'gobar_js/background_ie.js' %}

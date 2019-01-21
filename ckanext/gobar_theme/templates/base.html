@@ -1,0 +1,44 @@
+{%- ckan_extends -%}
+
+{%- block styles -%}
+    {{ super() }}
+    {%- resource 'gobar_css/bootstrap_style.css' -%}
+    {%- resource 'gobar_css/gobar_style.css' -%}
+{%- endblock -%}
+
+{%- block meta -%}
+    {{ super() }}
+
+    <meta property="og:url" content="http://datos.jus.gob.ar">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Portal de Datos Abiertos de la Justicia Argentina">
+    <meta property="og:site_name" content="Portal de Datos Abiertos de la Justicia Argentina">
+    <meta property="og:description"
+          content="Portal de Datos Abiertos de la Justicia Argentina. Recursos libres y reutilizables acerca del sistema de justicia de la República Argentina">
+    <meta property="og:image" content="http://datos.jus.gob.ar/img/fb_card.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="2400">
+    <meta property="og:image:height" content="1260">
+    <meta property="og:locale" content="es_AR">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@jusgobar"/>
+    {% block twitter_title -%}
+        <meta name="twitter:title" content="Datos Justicia Argentina">
+    {%- endblock %}
+    {% block twitter_img -%}
+        <meta name="twitter:description"
+              content="Portal de Datos Abiertos de la Justicia Argentina. Recursos libres y reutilizables acerca del sistema de justicia de la República Argentina.">
+    {%- endblock %}
+    {% block twitter_description -%}
+        <meta name="twitter:image:src" content="http://datos.gob.ar/img/twitter_card.png">
+    {%- endblock %}
+{%- endblock -%}
+
+{%- block title -%}
+    Portal de Datos Justicia Argentina {%- block subtitle -%}{%- endblock -%}
+{%- endblock -%}
+
+{%- block links -%}
+    <link rel="shortcut icon" href="/favicon.ico"/>
+{%- endblock -%}

@@ -1,0 +1,15 @@
+{% extends "gobar_page.html" %}
+
+{% block subtitle %} - Crear grupo{% endblock %}
+
+{% block content %}
+    <div id="new-group-container" class="container-fluid">
+        <div id="new-group" class="col-xs-12 col-md-10 col-md-offset-1">
+            <h1>Crear grupo</h1>
+            {{ c.form | safe }}
+        </div>
+    </div>
+
+    {% resource 'gobar_js/group_image_warning.js' %}
+
+{% endblock %}

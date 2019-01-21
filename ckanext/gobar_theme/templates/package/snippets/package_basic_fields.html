@@ -1,0 +1,11 @@
+{% ckan_extends %}
+
+{% block package_basic_fields_org %}
+    {{ super() }}
+ 
+    {{ form.input('home_featured', label='Mostrar tarjeta en la home', type='checkbox') }}
+ 
+    {{ form.input('Responsable', label='Autor (nombre corto para tarjeta en la home)', type='text') }}
+ 
+{% endblock %}
+

@@ -1,0 +1,29 @@
+{% extends "gobar_page.html" %}
+
+{% block subtitle %} - Datos Abiertos{% endblock %}
+
+{% block content %}
+    {% snippet "static/static_nav_bar.html", active_button='nav-data' %}
+
+    <div id="open-data-container" class="container-fluid gobar-static-container">
+        <div id="open-data" class="col-xs-12 col-md-10 col-md-offset-1 gobar-static">
+            <div class="col-xs-12 col-md-10 col-md-offset-1">
+                <h2>¿Qué son los datos abiertos?</h2>
+
+                <p>
+                    La publicación de datos en formatos digitales, para ser reutilizados y redistribuidos por parte de la ciudadanía, es una iniciativa global ligada a las políticas de Gobierno Abierto. Tiene por objetivo poner datos e información al alcance de todos los ciudadanos, sin restricciones de acceso, derechos de autor, patentes u otros mecanismos de control. Cuando los datos cumplen con estos requisitos, son considerados “datos abiertos”.
+                </p>
+
+                <h3>¿Para qué sirven?</h3>
+
+                <p>
+                  Los datos abiertos son una herramienta eficiente de acceso a la información. Muchas instituciones los publican de forma proactiva y forman parte de sus procesos de análisis, para realizar estrategias y definir políticas basadas en evidencia, así como mejorar la prestación de los servicios públicos.
+                </p>
+
+                <p>
+                    Para los ciudadanos, los datos abiertos son un medio para comprender mejor el funcionamiento de las instituciones del Estado. El hecho de acceder a mecanismos de rendición de cuentas permite evaluar el cumplimiento de las metas planteadas por sus representantes.
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

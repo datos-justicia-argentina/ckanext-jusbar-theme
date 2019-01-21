@@ -1,0 +1,113 @@
+<div id="featured-content-container" class="container-fluid">
+    <div id="featured-content" class="hidden-xs col-sm-10 col-sm-offset-1">
+        <!-- <div class="col-xs-12 col-lg-10 col-lg-offset-1 no-padding">
+            <h2>Datasets destacados</h2>
+            {% for featured_row in c.featured_packages %}
+                <div class="table-wrapper">
+                    {% if featured_row|length == 1 %}
+                        <div class="empty-card">
+                        </div>
+                    {% endif %}
+
+                    {% for featured_pkg in featured_row %}
+                        <a href="{{ h.url_for(controller='package', action='read', id=featured_pkg.name) }}">
+                            <div class="featured-card">
+                                <h2>{{ featured_pkg.title or featured_pkg.name }}</h2>
+
+                                <h3>{{ h.cut_text(featured_pkg.author, 150) }}</h3>
+
+                                <p>{{ h.cut_text(featured_pkg.notes, 250)|urlize }}</p>
+                            </div>
+                        </a>
+                        {% if loop.index % 2 == 1 and featured_row|length == 2%}
+                            <div class="table-spacer"></div>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if featured_row|length == 1 %}
+                        <div class="empty-card">
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div> -->
+        
+        <div class="col-xs-12 col-lg-10 col-lg-offset-1 no-padding">
+            <h2>Convenios y Protocolos Interjurisdiccionales</h2>
+            <div class="table-wrapper">
+                    
+                        <a href="https://github.com/datos-justicia-argentina/Convenio-Interjurisdiccional-de-Datos-Abiertos-de-la-Justicia-Argentina/blob/master/Convenio%20Interjurisdiccional%20de%20Datos%20Abiertos%20de%20Justicia.pdf" target = "_blank">
+                            <div class="featured-card">
+                                <h2>Convenio Interjurisdiccional de Datos Abiertos de la Justicia Argentina</h2>
+
+                                <!--<h3>{{ h.cut_text(featured_pkg.author, 150) }}</h3> -->
+
+                                <p>El presente convenio sienta las bases para el desarrollo del nuevo sistema de datos de justicia de la argentina. Esta iniciativa se propone la publicación de datos en formatos abiertos sobre el funcionamiento y la composición de poderes judiciales y ministerios públicos de todo el país. Fue firmado por más de 50 instituciones en presencia del Presidente de la Nación, el 11 de octubre  de 2016.
+</p>
+                            </div>
+                        </a>
+                        <div class="table-spacer"></div>
+						<a href="https://github.com/datos-justicia-argentina/Protocolo-de-implementacion-Convenio-Interjurisdiccional-de-Datos-Abiertos-de-la-Justicia-Argentina/blob/master/Protocolo%20de%20Implementaci%C3%B3n%20del%20Convenio%20Interjurisdiccional%20de%20Datos%20Abiertos%20de%20Justicia.pdf" target = "_blank">
+                            <div class="featured-card">
+                                <h2>Protocolo de implementación del Convenio Interjurisdiccional de Datos Abiertos de la Justicia Argentina</h2>
+
+                                <!--<h3>{{ h.cut_text(featured_pkg.author, 150) }}</h3> -->
+
+                                <p>El Protocolo Unificado de Datos y Procesos es un documento elaborado en forma conjunta por el Ministerio de Justicia y Derechos Humanos y las instituciones firmantes del Convenio Interjurisdiccional de Datos Abiertos de Justicia. Tiene el propósito de establecer los mecanismos mediante los cuales los poderes judiciales y los ministerios públicos de las provincias compartirán los datos estadísticos que serán publicados en el Portal de Datos de la Justicia Argentina. El protocolo también contiene los listados y tablas de datos de los que se compondrá el nuevo sistema de estadísticas de la justicia argentina.
+</p>
+                            </div>
+                        </a>
+                        <div class="table-spacer"></div>
+				</div>
+        </div>
+		<div class="col-xs-12 col-lg-10 col-lg-offset-1 no-padding">
+            <h2>Presentaciones de la Conferencia Justicia Abierta (02/12/2016)</h2>
+            
+                <div class="table-wrapper">
+                    
+                        <a href="https://github.com/datos-justicia-argentina/Presentacion-Datos-Abiertos-en-Justicia-Criminal---Sunil-Choenni" target = "_blank">
+                            <div class="featured-card">
+                                <h2>Datos Abiertos en Justicia Criminal - Sunil Choenni</h2>
+
+                                <!--<h3>{{ h.cut_text(featured_pkg.author, 150) }}</h3> -->
+
+                                <p>Presentación de Sunil Choenni en el panel “Datos judiciales abiertos” en la Conferencia Justicia Abierta, que tuvo lugar el viernes 2 de diciembre de 2016 en la Facultad de Derecho de la UBA.
+Sunil Choenni tiene un doctorado en tecnología de bases de datos de la Universidad de Twente y una maestría en informática teórica de la Universidad de Tecnología de Delft. Dirige el departamento de Gestión de Información 
+Estadística y Análisis de Políticas del Centro de Investigación y Documentación (WODC) del Ministerio de Seguridad y Justicia de los Países Bajos
+</p>
+                            </div>
+                        </a>
+                        <div class="table-spacer"></div>
+						<a href="https://github.com/datos-justicia-argentina/Informacion-Legal-Abierta---Clemens-Wass" target = "_blank">
+                            <div class="featured-card">
+                                <h2>Información Legal Abierta - Clemens Wass</h2>
+
+                                <!--<h3>{{ h.cut_text(featured_pkg.author, 150) }}</h3> -->
+
+                                <p>Presentación de Clemens Wass en el panel “Datos judiciales abiertos” en la Conferencia Justicia Abierta, que tuvo lugar el viernes 2 de diciembre de 2016 en la Facultad de Derecho de la UBA.
+Clemens Wass es MBL, MBA, co-fundador y CEO de openlaws. Licenciado en derecho, derecho de los negocios Salzburg University y Salzburg Management Business School) y administración de empresas. Cuenta con diez años de experiencia práctica en el área de Derecho e Informática Jurídica.
+</p>
+                            </div>
+                        </a>
+                        <div class="table-spacer"></div>
+				</div>		
+				<div class="table-wrapper">
+						<a href="https://github.com/datos-justicia-argentina/Presentacion-de-Estadisticas-Judiciales---Carlos-Gregorio" target = "_blank">
+                            <div class="featured-card">
+                                <h2>Estadísticas judiciales - Carlos Gregorio</h2>
+
+                                <!--<h3>{{ h.cut_text(featured_pkg.author, 150) }}</h3> -->
+
+                                <p>Presentación de Carlos Gregorio en el panel “Datos judiciales abiertos” en la Conferencia Justicia Abierta, que tuvo lugar el viernes 2 de diciembre de 2016 en la Facultad de Derecho de la UBA.
+Carlos Gregorio es Doctor en Derecho y Ciencias Sociales y Licenciado en Matemáticas por la Universidad de Buenos Aires. Actualmente es asesor del Programa Justicia Abierta del Ministerio de Justicia y Derechos Humanos de la Nación; profesor de post-grado de la Universidad Sergio Arboleda, Colombia; e investigador del Instituto de Investigación para la Justicia de Argentina.
+</p>
+                            </div>
+                        </a>
+						<div class="table-spacer"></div>
+                        <div class="empty-card">
+                        </div>
+                </div>
+
+        </div>
+    </div>
+</div>

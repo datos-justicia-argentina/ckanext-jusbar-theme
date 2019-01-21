@@ -1,0 +1,47 @@
+$header-height: 60px;
+
+#header {
+  background: $dark-blue;
+  padding: 0;
+  @include box-shadow(0 0 12px 0 rgba(0, 0, 0, 0.5));
+  position: relative;
+  z-index: 2;
+  white-space: nowrap;
+
+  #header-spacing {
+    $padding: 20px;
+    padding: 0 $padding;
+    text-align: center;
+
+    .logo-header, .header-links {
+      height: $header-height;
+      $font-size: 18px;
+      font-size: $font-size;
+      line-height: $header-height / $font-size;
+    }
+
+    .header-links {
+      a {
+        margin-left: 0.5em;
+        font-size: 90%;
+      }
+      @include breakpoint-sm {
+        text-align: right;
+        a {
+          margin-left: 1em;
+          font-size: 100%;
+        }
+      }
+    }
+
+    .logo-header {
+      @include breakpoint-sm {
+        text-align: left;
+      }
+      .logo-ministerio {
+        height: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

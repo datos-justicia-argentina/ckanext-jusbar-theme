@@ -1,0 +1,16 @@
+#edit-package-container, #new-package-container {
+  @include base-container();
+  #edit-package, #new-package{
+    @include base-content();
+    @include base-form();
+    form {
+      ol {
+        margin: 0 0 10px 0;
+      }
+    }
+    .edit-resources-button {
+      float: right;
+      margin: 20px 0;
+    }
+  }
+}

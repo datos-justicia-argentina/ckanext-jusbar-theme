@@ -1,0 +1,28 @@
+{% extends "gobar_page.html" %}
+
+{% block twitter_title -%}
+    <meta name="twitter:title" content="Datos Justicia Argentina | Datos">
+{%- endblock %}
+{% block twitter_img -%}
+    <meta name="twitter:description" content="Información pública producida, almacenada y publicada por las diferentes áreas del Gobierno de la República Argentina.">
+{%- endblock %}
+{% block twitter_description -%}
+    <meta name="twitter:image:src" content="http://datos.gob.ar/img/twitter_card_data.png">
+{%- endblock %}
+
+{% block subtitle %} - Datos{% endblock %}
+
+{% block content %}
+
+    {% snippet "package/title.html" %}
+
+    <div class="package-container container-fluid">
+        <div class="package-search col-xs-12 col-md-10 col-md-offset-1">
+            {% snippet "package/snippets/search_filters.html" %}
+            {% snippet "package/snippets/search_results.html" %}
+        </div>
+    </div>
+
+    {% resource 'gobar_js/search/groups.js' %}
+
+{% endblock %}

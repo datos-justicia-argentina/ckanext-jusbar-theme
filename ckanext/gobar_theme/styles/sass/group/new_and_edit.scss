@@ -1,0 +1,13 @@
+#edit-group-container, #new-group-container {
+  @include base-container();
+  #edit-group, #new-group {
+    @include base-content();
+    @include base-form();
+
+    .group-warning {
+      span {
+        color: #870000;
+      }
+    }
+  }
+}

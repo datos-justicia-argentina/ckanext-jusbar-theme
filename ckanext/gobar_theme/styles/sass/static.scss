@@ -1,0 +1,84 @@
+.gobar-static-container {
+  @include base-container();
+  .gobar-static {
+    @include base-content();
+    padding: 20px 0;
+    @include breakpoint-md {
+      padding: 30px 50px;
+    }
+
+    h1 {
+      margin: 20px 0;
+      font-weight: 400;
+      font-size: 40px;
+    }
+    h2 {
+      font-weight: 400;
+      font-size: 25px;
+    }
+    h3 {
+      color: $dark-blue;
+      font-size: 20px;
+    }
+    strong {
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    ul li {
+      font-size: 14px;
+      margin-bottom: 5px;
+
+    }
+  }
+}
+
+#static-nav-bar {
+  background-color: #f5f5f5;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  border-bottom: solid 1px $inactive;
+
+  $vertical-padding: 10px;
+  $border-bottom: 3px;
+
+  .nav-section {
+    display: inline-block;
+    a.nav-button {
+      display: inline-block;
+      color: $grey;
+      padding: $vertical-padding 0 ($vertical-padding - $border-bottom) 0;
+      border-bottom: solid $border-bottom transparent;
+      font-weight: 500;
+      .nav-button-border {
+        padding: 0 6px;
+        @include breakpoint-sm {
+          padding: 0 20px;
+        }
+      }
+      @include breakpoint-sm {
+        &#nav-legal-link, &#nav-plaform-link {
+          .nav-button-border {
+            border-left: solid 1px $light-grey;
+          }
+        }
+      }
+
+      &:hover {
+        color: $dark-blue;
+        border-bottom-color: $dark-blue;
+      }
+    }
+
+    &:hover, &.active {
+      a.nav-button {
+        color: $dark-blue;
+        border-bottom-color: $dark-blue;
+      }
+    }
+  }
+}
