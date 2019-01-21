@@ -10,22 +10,22 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='''ckanext-gobar_theme''',
+    name='''ckanext-jusbar_theme''',
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # http://packaging.python.org/en/latest/tutorial.html#version
-    version='0.0.1',
+    version='0.1.0',
 
     description='''.gob.ar theme''',
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/iheredia/ckanext-gobar_theme',
+    url='https://github.com/datos-justicia-argentina/ckanext-jusbar-theme',
 
     # Author details
-    author='''Ignacio Heredia''',
-    author_email='''ignacio.nh@gmail.com''',
+    author='''Xavier Petit''',
+    author_email='''nuxion@gmail.com''',
 
     # Choose your license
     license='AGPL',
@@ -78,11 +78,11 @@ setup(
     # pip to create the appropriate form of executable for the target platform.
     entry_points='''
         [ckan.plugins]
-        gobar_theme=ckanext.gobar_theme.plugin:Gobar_ThemePlugin
+        jusbar_theme=ckanext.jusbar_theme.plugin:Jusbar_ThemePlugin
         [babel.extractors]
         ckan = ckan.lib.extract:extract_ckan
 	[paste.paster_command]
-	clean_datastore = ckanext.gobar_theme.commands:AdminCommand
+	clean_datastore = ckanext.jusbar_theme.commands:AdminCommand
     ''',
 
     # If you are changing from the default layout of your extension, you may

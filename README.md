@@ -9,6 +9,14 @@ Originalmente empezó como un [fork](https://github.com/datos-justicia-argentina
 
 Para levantar una instancia local seguir los [docs de instalacion](./docs/README.md) 
 
+## Running tests
+
+Desde la raiz del reposiotrio, y activando el environment de ckan, ejecutar:
+
+```
+nosetests --ckan --with-pylons=test.ini ckanext/jusbar_theme/tests
+```
+
 ## Contacto
 
 Cualquier tipo de comentarios o feedback es bienvenido como issue dentro de este repositorio

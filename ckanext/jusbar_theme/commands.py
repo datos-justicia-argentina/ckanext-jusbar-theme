@@ -10,7 +10,7 @@ logger = logging.getLogger('ckan.logic')
 
 class AdminCommand(ckan.lib.cli.CkanCommand):
     '''Command for datastore cleanup
-    Usage: paster --plugin=ckanext-gobar_theme admin <command> -c <path to config file>
+    Usage: paster --plugin=ckanext-jusbar_theme admin <command> -c <path to config file>
 
         command:
         help  - prints this help

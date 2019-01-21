@@ -6,9 +6,9 @@ class GobArRouter:
     def __init__(self, route_map):
         self.route_map = route_map
 
-        self.home_controller = 'ckanext.gobar_theme.controller:GobArHomeController'
+        self.home_controller = 'ckanext.jusbar_theme.controller:GobArHomeController'
         self.home_routes = SubMapper(self.route_map, controller=self.home_controller)
-        self.api_controller = 'ckanext.gobar_theme.controller:GobArApiController'
+        self.api_controller = 'ckanext.jusbar_theme.controller:GobArApiController'
 
     def redirect(self, *routes):
         for url_from, url_to in routes:

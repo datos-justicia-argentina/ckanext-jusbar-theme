@@ -1,11 +1,11 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckan.plugins import implements, IRoutes
-import ckanext.gobar_theme.helpers as gobar_helpers
-import ckanext.gobar_theme.routing as gobar_routes
+import ckanext.jusbar_theme.helpers as gobar_helpers
+import ckanext.jusbar_theme.routing as gobar_routes
 
 
-class Gobar_ThemePlugin(plugins.SingletonPlugin):
+class Jusbar_ThemePlugin(plugins.SingletonPlugin):
     implements(plugins.IConfigurer)
     implements(IRoutes, inherit=True)
     implements(plugins.ITemplateHelpers)
