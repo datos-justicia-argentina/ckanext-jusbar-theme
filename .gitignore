@@ -43,3 +43,5 @@ docs/_build/
 .sass-cache
 .idea
 
+# vim editor
+*.swp

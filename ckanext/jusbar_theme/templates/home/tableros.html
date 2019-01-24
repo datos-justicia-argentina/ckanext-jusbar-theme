@@ -1,0 +1,94 @@
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+	border-radius: 5px; /* 5px rounded corners */
+	/*border: 0.3mm solid #dddddd;*/
+	margin-bottom: 20px;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card-body {
+	border-top: 0.3mm solid #dddddd;
+	 padding: 2px 16px;
+}
+
+.panels-row {
+  display: flex;
+  flex-wrap: wrap; // Comentado porque trae problemas en Safari
+	flex-direction: row;
+}
+.panel{
+	width: 100%;
+	border-color: black;
+	background-color: green;
+}
+.panel-heading{
+	border-color: black;
+	border: 50px;
+}
+.panel-default{
+	background-color: red;
+	border-radius: 10px;
+	border-color: black;
+	border: 50px black;
+	border-top-color: red;
+}
+.equal {
+  display: flex;
+  display: -webkit-flex;
+	flex-wrap: wrap;
+  align-items: center;
+}
+</style>
+<div class="container">
+	<div class="panels-row center-block equal">
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
+		 <div class="card">
+			<div class="panel-heading">
+				<img src="http://placehold.it/200x150" alt="penal" height="auto" width="auto" class="img-rounded img-responsive center-block">
+			</div>
+      <div class="card-body text-center">
+        <h3>Justicia Penal</h3>
+      </div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
+		 <div class="card">
+			<div class="panel-heading text-center">
+				<img src="http://placehold.it/200x150" alt="civil" class="img-rounded">
+			</div>
+      	<div class="card-body text-center">
+        <h3>Justicia Civil</h3>
+      </div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
+		<div class="card">
+			<div class="panel-heading text-center">
+				<img src="http://placehold.it/200x150" alt="genero" class="img-rounded">
+			</div>
+      	<div class="card-body text-center">
+        <h3>Género</h3>
+      </div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
+		<div class="card">
+			<div class="panel-heading text-center">
+			<img src="http://placehold.it/200x150" alt="oralidad" class="img-rounded">
+      </div>
+      	<div class="card-body text-center">
+        <h3>Oralidad</h3>
+      </div>
+		</div>
+	</div></div>
+</div>
+
+{% resource 'gobar_js/home/groups.js' %}
