@@ -1,0 +1,132 @@
+ <style>
+div#datagroups .row {
+	/*background-color: red;*/ 
+ }
+div#datagroups .row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+div#datagroups .invisible {
+      opacity: 0; 
+}
+     
+div#datagroups .row.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+div#datagroups .panel {
+	height: 100%;
+	 /* Add shadows to create the "card" effect */
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+   transition: 0.3s;
+   border-color: white;
+	 /*background-color: blue;*/
+}
+/* On mouse-over, add a deeper shadow */
+div#datagroups .panel:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+div#datagroups .panel-body {
+	overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+	
+}
+div#datagroups h5 {
+   text-overflow: ellipsis;
+	overflow: hidden;
+   white-space: nowrap;
+}
+div#datagroups [class*='img-group'] {
+	float: left;
+	margin-right: .4em;
+	width:50px;
+   height: 50px;
+ }
+div#datagroups .panel.with-edit-button {
+	margin-bottom: 35px; 
+}
+div#datagroups .panel .edit-container {
+      position: absolute;
+      z-index: 1;
+      top: -5px;
+      right: 10px;
+      overflow: hidden;
+      padding: 4px;
+      background: #D1D3D4;
+      -o-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      transition-delay: 0s;
+      -webkit-transition-duration: 200ms;
+      -moz-transition-duration: 200ms;
+      transition-duration: 200ms;
+      -webkit-transition-timing-function: ease-in;
+      -moz-transition-timing-function: ease-in;
+      transition-timing-function: ease-in;
+      -webkit-transition-property: top;
+      -moz-transition-property: top;
+      transition-property: top; }
+      div#datagroups .panel .edit-container .edit-svg {
+        height: 20px;
+        width: 20px;
+        fill: white; }
+    div#datagroups .panel:hover .edit-container {
+      top: -28px; }
+      
+div#datagroups .pad{
+	padding: 15px;
+}
+</style>
+	<div id="datagroups" class="container">
+	<div class="row pad">
+		<div class="col-12">
+			<h3>Datasets por grupo</h3>
+		</div>
+	
+	</div>
+    <div class="row display-flex center-block">
+    	{% set dataset_url = h.url_for(controller='package', action='search') %}
+    	{%- for group in c.groups -%}
+            {%- set can_update = h.check_access('group_update', {'id': c.group_dict.id}) -%}
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 {{ 'with-edit-button' if can_update else '' }}">
+				<div class="panel panel-default with-edit-button">
+				{% if can_update %}
+               <a href="{{ h.url_for(controller='group', action='edit', id=group.name) }}">
+						<div class="edit-container">
+							{% snippet "svg/edit.svg" %}
+						</div>
+					</a>
+				{% endif %}
+				{% set group_class = 'active' if group.package_count > 0 else 'inactive' %}
+            {% if group.package_count > 0 %}
+                    <a href="{{ h.add_url_param(new_params={'groups': group.name}, alternative_url=dataset_url) }}">
+            {% endif %}
+					<div class="panel-body">
+						<img class="img-group center-block" src="{{ group.image_display_url }}">
+						<h5>{{ group.display_name }}</h5>{{ group.description }}				
+					</div>
+						{% if group.package_count > 0 %}
+                    </a>
+                	{% endif %}
+						
+				</div>        
+        </div>
+       {%- endfor -%}  
+    </div>
+    <div class="row center-block">
+    	<div class="col-6">
+    			<a href="{{ h.url_for(controller='package', action='search') }}">
+    			<button class="btn btn-primary center-block">Ver el catálogo completo</button>
+    			</a>
+    	</div>
+    
+    </div>
+  </div>
+	  
+
+{% resource 'gobar_js/home/groups.js' %}

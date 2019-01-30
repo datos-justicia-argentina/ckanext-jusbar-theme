@@ -1,45 +1,77 @@
 <style>
 
-.flex-row {
-				display: flex;
-				display: -webkit-flex;
-				-webkit-align-items: center;
-				flex-wrap: wrap;
-				align-items: stretch;
-				/*background-color: aquamarine;*/
-				justify-content: center;
-				margin-top: 8px;
-    }
-    .flex-row > [class*='col-'] {
-        display: flex;
-				flex-direction: column;
-				/*background-color: yellow;*/
-    }
-    .flex-row.row:after, 
-    .flex-row.row:before {
-        display: flex;
-    }
+div#tablero .row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+    
+div#tablero .row.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+div#tablero .panel {
+	height: 100%;
+	 /* Add shadows to create the "card" effect */
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+   transition: 0.3s;
+   border-radius: 5px;
+   border-color: white;
+	 /*background-color: blue;*/
+}
 
-	div#tablero.container {
-		/*background-color: red;*/
-		overflow: hidden;
-	}
-	div#tablero.container .row {
-		background-color: blue;
-	}
-	div#tablero.container [class*="col-"]{
-		float: none;
-		/*background-color: green;*/
+/* On mouse-over, add a deeper shadow */
+div#tablero .panel:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 
-	}
+div#tablero .panel-body {
+	/*overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;*/
+   border-top: 0.3mm solid #dddddd;
+}
+div#tablero .panel-header {
+	padding: 0.3em;
+
+}
+div#tablero h5 {
+   text-overflow: ellipsis;
+	overflow: hidden;
+   white-space: nowrap;
+}
+div#tablero .panel-body h3 {
+   margin-top: 0px;
+}
+div#tablero [class*='img-group'] {
+	/*float: left;*/
+	margin-right: .4em;
+	width:80px;
+   height: 80px;
+ }
+	
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
 	border-radius: 5px; /* 5px rounded corners */
 	/*border: 0.3mm solid #dddddd;*/
 	margin-bottom: 20px;
-	min-height: 320px;
-	max-height: 320px;
+	/*min-height: 320px;
+	max-height: 320px;*/
+}
+@media (min-width: 768px){
+	.card {
+		min-height: 200px;
+		max-height: 200px;
+				
+	}
+}
+@media (min-width: 964px){
+	.card {
+		min-height: 320px;
+		max-height: 320px;
+		
+	}
 }
 .vcenter {
     display: inline-block;
@@ -52,60 +84,70 @@
 .card-body {
 	border-top: 0.3mm solid #dddddd;
 	 padding: 2px 16px;
+	 margin-bottom: 15px;
+	 /*overflow: hidden;*/
 }
-.panel-heading{
-	border-color: black;
-	border: 50px;
+div#tablero .pad{
+	padding: 15px;
 }
-
 </style>
 <div id="tablero" class="container">
-	<div class="flex-row center-block">
-		<div class="col-xs-8 col-sm-8 col-md-3 col-lg-3">
-			<div class="card">
-				<div class="panel-heading">
+	<div class="row pad">
+		<div class="col-12">
+			<h3>Tableros</h3>
+		</div>
+	
+	</div>
+	<div class="row display-flex center-block">
+		<div class="col-xs-11 col-sm-6 col-md-3 col-lg-3">
+			<div class="panel panel-default">
+				<div class="panel-header text-center">
 					<img src="http://placehold.it/200x150" alt="penal" height="auto" width="auto" class="img-rounded img-responsive center-block">
 				</div>
-      		<div class="card-body text-center">
+				<div class="panel-body text-center">
 					<h3>Justicia Penal</h3>
 					Indicadores del país desagregados por provincias.
       		</div>
 			</div>
 		</div>
-		<div class="col-xs-8 col-sm-8 col-md-3 col-lg-3">
-			<div class="card">
-				<div class="panel-heading text-center">
-					<img src="http://placehold.it/200x150" alt="civil" class="img-rounded">
+		
+		<div class="col-xs-11 col-sm-6 col-md-3 col-lg-3">
+			<div class="panel panel-default">
+				<div class="panel-header text-center">
+					<img src="http://placehold.it/200x150" alt="penal" height="auto" width="auto" class="img-rounded img-responsive center-block">
 				</div>
-      		<div class="card-body text-center">
+				<div class="panel-body text-center">
 					<h3>Justicia Civil</h3>
 					Incluye civil, laboral, civil patrimonial, comercial, concursos y quiebras, tributario fiscal, familia y contencioso administrativo.
       		</div>
 			</div>
-		</div>
-		<div class="col-xs-8 col-sm-8 col-md-3 col-lg-3">
-			<div class="card">
-				<div class="panel-heading text-center">
-					<img src="http://placehold.it/200x150" alt="genero" class="img-rounded">
+		</div>		
+		
+		<div class="col-xs-11 col-sm-6 col-md-3 col-lg-3">
+			<div class="panel panel-default">
+				<div class="panel-header text-center">
+					<img src="http://placehold.it/200x150" alt="penal" height="auto" width="auto" class="img-rounded img-responsive center-block">
 				</div>
-      		<div class="card-body text-center">
+				<div class="panel-body text-center">
 					<h3>Género</h3>
 					Datos de Justicia con Perspectiva de Género.
       		</div>
 			</div>
-		</div>
-		<div class="col-xs-8 col-sm-8 col-md-3 col-lg-3">
-			<div class="card">
-				<div class="panel-heading text-center">
-					<img src="http://placehold.it/200x150" alt="oralidad" class="img-rounded">
-      		</div>
-      		<div class="card-body text-center">
+		</div>		
+			
+		<div class="col-xs-11 col-sm-6 col-md-3 col-lg-3">
+			<div class="panel panel-default">
+				<div class="panel-header text-center">
+					<img src="http://placehold.it/200x150" alt="penal" height="auto" width="auto" class="img-rounded img-responsive center-block">
+				</div>
+				<div class="panel-body text-center">
 					<h3>Oralidad</h3>
 					Indicadores en procesos civiles y comerciales, en el marco del proyecto de generalización de la oralidad efectiva.
       		</div>
 			</div>
-		</div>
+		</div>		
+
 	</div>
 </div>
 
-{% resource 'gobar_js/home/groups.js' %}
+
