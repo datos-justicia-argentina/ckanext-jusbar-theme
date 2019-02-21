@@ -29,5 +29,7 @@ class Jusbar_ThemePlugin(plugins.SingletonPlugin):
             'join_groups': gobar_helpers.join_groups,
             'cut_text': gobar_helpers.cut_text,
             'cut_img_path': gobar_helpers.cut_img_path,
-            'organizations_with_packages': gobar_helpers.organizations_with_packages
+            'organizations_with_packages': gobar_helpers.organizations_with_packages,
+            'recent_resources': gobar_helpers._last_resources,
+            'prueba_helper': gobar_helpers.prueba_helper
         }

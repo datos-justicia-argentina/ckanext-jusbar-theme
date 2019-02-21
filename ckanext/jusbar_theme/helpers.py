@@ -75,11 +75,49 @@ def cut_text(text, limit):
 
 def cut_img_path(url):
     return urlparse(url).path
-	
-	
+
+
 def organizations_with_packages():
     organizations = logic.get_action('organization_list')({}, {'all_fields': True})
     organizations_with_at_least_one_package = [
         organization for organization in organizations if organization['package_count'] > 0
     ]
-    return len(organizations_with_at_least_one_package)	
+    return len(organizations_with_at_least_one_package)
+
+def _last_resources():
+        """
+        Obtiene los ultimos datasets modificados/creados, con su respectivos
+        recursos.
+        Sin embargo lo que se obtendra es el ultimo recurso de cada dataset
+        que traiga.
+        """
+        data_dict = {
+            'limit': 6
+        }
+        packages = logic.get_action('current_package_list_with_resources')\
+            ({}, data_dict)
+
+        response  = []
+        for package in packages:
+            if 'resources' in package:
+                try:
+                    modified = package['resources'][-1]['last_modified']\
+                        .split('T')[0]
+                    title = package['title']
+                    pack_id = package['id']
+                    response.append({ 'id': pack_id,
+                                     'modified': modified,
+                                     'title': title })
+                except IndexError:
+                    pass
+                except KeyError:
+                    pass
+                except AttributeError:
+                    pass
+
+        return response
+
+def prueba_helper():
+    return "esto es un helper de prueba"
+
+

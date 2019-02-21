@@ -1,0 +1,15 @@
+<div class="container">
+<div class="row">
+	<div class="col-12">
+	<h3>Ultimos recursos</h3>
+	<p>prueba hardcode2</p>	
+	 {% set recents =  h.recent_resources() %}
+	 {%- for recent in recents -%}
+	 {{ recent.url }}
+	 {%- endfor -%}
+	 {% set prueba =  h.prueba_helper() %}
+	 {{ prueba }}
+	
+	</div>
+</div>
+</div>
