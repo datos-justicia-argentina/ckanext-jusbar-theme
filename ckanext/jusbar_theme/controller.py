@@ -60,6 +60,10 @@ class GobArHomeController(HomeController):
         return base.render('static/platform.html')
 
     def estadistica(self):
+        """
+        Deprecated
+        @version next-0.2.0
+        """
         return base.render('static/estadistica_judicial.html')
 
 

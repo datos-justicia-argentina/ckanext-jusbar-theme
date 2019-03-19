@@ -30,10 +30,15 @@ class GobArRouter:
         self.home_routes.connect('/', action='index')
 
     def connect_static(self):
+        """
+        estadistica deprecated
+        @version 0.2.0
+
+        """
         self.home_routes.connect('gobar_open_data', '/datos-abiertos', action='open_data')
         self.home_routes.connect('gobar_legal', '/marco-legal', action='legal')
         self.home_routes.connect('gobar_platform', '/plataforma', action='platform')
-        self.home_routes.connect('gobar_estadistica', '/estadistica_judicial', action='estadistica')
+        #self.home_routes.connect('gobar_estadistica', '/estadistica_judicial', action='estadistica')
         self.redirect(
             ('/about', '/datos-abiertos')
         )

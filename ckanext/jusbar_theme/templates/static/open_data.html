@@ -4,47 +4,52 @@
 
 {% block content %}
     {% snippet "static/static_nav_bar.html", active_button='nav-data' %}
-
-    <div id="open-data-container" class="container-fluid gobar-static-container">
+    
+    <style>
+    	#videoayuda {
+    	padding-top: 2em;
+    	padding-bottom: 2em;
+    	}
+    	.margins-1 {
+    		padding-top: 1em;
+    		padding-bottom: 1em;
+    	};
+    	.margins-3 {
+    		padding-top: 3em;
+    		/*padding-bottom: 1em;*/
+    	};
+    </style>
+<!-- .col-xs- 	.col-sm- 	.col-md- 	.col-lg- -->
+    <div id="open-data-container" class="container-fluid gobar-static-container mb-5">
         <div id="open-data" class="col-xs-12 col-md-10 col-md-offset-1 gobar-static">
-            <div class="col-xs-12 col-md-10 col-md-offset-1">
-                <h2>¿Qué son los datos abiertos?</h2>
-
-                <p>
-                    La publicación de datos en formatos digitales, para ser reutilizados y redistribuidos por parte de la ciudadanía, es una iniciativa global ligada a las políticas de Gobierno Abierto. Tiene por objetivo poner datos e información al alcance de todos los ciudadanos, sin restricciones de acceso, derechos de autor, patentes u otros mecanismos de control. Cuando los datos cumplen con estos requisitos, son considerados “datos abiertos”.
-                </p>
-
-                <h3>¿Para qué sirven?</h3>
-
-                <p>
-                  Los datos abiertos son una herramienta eficiente de acceso a la información. Muchas instituciones los publican de forma proactiva y forman parte de sus procesos de análisis, para realizar estrategias y definir políticas basadas en evidencia, así como mejorar la prestación de los servicios públicos.
-                </p>
-
-                <p>
-                    Para los ciudadanos, los datos abiertos son un medio para comprender mejor el funcionamiento de las instituciones del Estado. El hecho de acceder a mecanismos de rendición de cuentas permite evaluar el cumplimiento de las metas planteadas por sus representantes.
-                </p>
+         	 <!-- beginsection video -->
+            <div class="col-xs-12 col-md-10 col-md-offset-1 " id="videoayuda">
+            <h2>Datos abiertos</h2>
+            	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 margins-1">
+            		<iframe allowfullscreen="" frameborder="0" height="350" width="100%" src="https://www.youtube.com/embed/6odXfjrA13g?rel=0"></iframe>
+               	               </div>
+            	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 margins-3">
+            	<h3>¿Qué son y para qué sirven?</h3>
+                	<p>Los datos abiertos son un medio para comprender mejor el funcionamiento del gobierno, fortalecer el rendimiento de cuentas, modificar y mejorar la manera de prestar y acceder a los servicios públicos, alentando a descubrimientos que mejoren la vida de la ciudadanía.</p>
+<p>Al disponibilizar datos públicos, los gobiernos permiten que terceros (empresas, periodistas, investigadores y cualquier otro ciudadano) puedan desarrollar recursos y herramientas que generen impacto positivo sobre sus comunidades.</p>
+<p>Con la publicación de datos abiertos, el Portal de Datos de la Justicia Argentina facilita el proceso de búsqueda, descubrimiento y acceso a datos que facilitan la toma de decisiones y la participación por parte de funcionarios, investigadores y de todos los ciudadanos.</p>
+               </div>
             </div>
-          </div>
-          <!-- video -->
-      <div class="col-xs-12 col-md-10 col-md-offset-1">
-          <h2>Nuevo Sistema de Datos de la Justicia Argentina</h2>
+            <!-- endsection video -->
+            <!-- beginsection video -->
+            <div class="col-xs-12 col-md-10 col-md-offset-1" id="videoayuda">
+                        	
+            	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            	<h3>¿Qué es el Nuevo Sistema de Datos de la Justicia Argentina?</h3>
+                	<p>El Sistema de Datos de la Justicia Argentina reúne 51 instituciones de justicia de todo el país, coordinadas por el Ministerio de Justicia y Derechos Humanos para la publicación de estadísticas judiciales en formatos abiertos y reutilizables. Es resultado del Convenio Interjurisdiccional de Datos Judiciales Abiertos, firmado el 11 de octubre de 2016 en la Casa Rosada. Los datos de los que se componen dichas estadísticas fueron consensuados de forma colectiva por las instituciones firmantes, con el desarrollo de protocolos de datos y de procesos que permiten la organización del trabajo y la unificación de criterios.</p>
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+               	<iframe width="100%" height="350" src="https://www.youtube.com/embed/Tc-wR2Utjp8?rel=0" frameborder="0" allowfullscreen></iframe>
+               </div>
+            </div>
+            <!-- endsection video -->
+            
 
-          <section id="ej-video" class="row">
-
-            <div class="col-sm-6" style="padding-top:1.5%;">
-              <iframe width="100%" height="350" src="https://www.youtube.com/embed/Tc-wR2Utjp8?rel=0" frameborder="0" allowfullscreen></iframe>
-
-            </div><!-- end col -->
-
-            <div class="col-sm-6" >
-              <h3>¿Qué es el Nuevo Sistema de Datos de la Justicia Argentina?</h3>
-                <p>
-                  El Sistema de Datos de la Justicia Argentina reúne 51 instituciones de justicia de todo el país, coordinadas por el Ministerio de Justicia y Derechos Humanos para la publicación de estadísticas judiciales en formatos abiertos y reutilizables. Es resultado del Convenio Interjurisdiccional de Datos Judiciales Abiertos, firmado el 11 de octubre de 2016 en la Casa Rosada. Los datos de los que se componen dichas estadísticas fueron consensuados de forma colectiva por las instituciones firmantes, con el desarrollo de protocolos de datos y de procesos que permiten la organización del trabajo y la unificación de criterios.</p>
-            </div><!-- end col -->
-
-          </section><!-- row -->
         </div>
-
-          <!-- endvideo -->
     </div>
 {% endblock %}
