@@ -28,10 +28,10 @@
         <div class="toolbar">
           {% block breadcrumb %}
             {% if self.breadcrumb_content() | trim %}
-              <ol class="breadcrumb">
+              <!--ol class="breadcrumb">
                 {% snippet 'snippets/home_breadcrumb_item.html' %}
                 {% block breadcrumb_content %}{% endblock %}
-              </ol>
+              </ol-->
             {% endif %}
           {% endblock %}
         </div>
@@ -58,7 +58,7 @@
                   </ul>
                 </header>
               {% endblock %}
-              <div class="module-content">
+              <div class="module-content" style="font-size: 16px">
                 {% if self.page_primary_action() | trim %}
                   <div class="page_primary_action">
                     {% block page_primary_action %}{% endblock %}
