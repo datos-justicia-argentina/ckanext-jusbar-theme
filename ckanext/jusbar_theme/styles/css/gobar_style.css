@@ -360,9 +360,11 @@ div#background-container {
     .gobar-static-container .gobar-static strong {
       font-weight: 500; }
     .gobar-static-container .gobar-static p {
-      font-size: 14px; }
+      font-weight: 330; 
+      font-size: 15px; }
     .gobar-static-container .gobar-static ul li {
-      font-size: 14px;
+      font-weight: 330; 
+      font-size: 15px;
       margin-bottom: 5px; }
 
 #static-nav-bar {
