@@ -38,15 +38,18 @@ div#datagroups h5 {
 	overflow: hidden;
    white-space: nowrap;
 }
+
+
 div#datagroups [class*='img-group'] {
 	float: left;
 	margin-right: .4em;
 	width:50px;
-  height: 50px;
+  	height: 50px;
+	fill: #0072bc !important;
 }
 
 div#datagroups .panel:hover [class*='img-group'] {
-  -webkit-filter: invert(90%); filter: invert(90%);
+  -webkit-filter: grayscale(90%); filter: grayscale(90%);
 }
 
 div#datagroups .panel.with-edit-button {
@@ -86,6 +89,12 @@ div#datagroups .panel .edit-container {
 div#datagroups .pad{
 	padding: 15px;
 }
+.img-group svg path, img-group img path {
+	fill: #0072bc !important;
+}
+.minjus-group:hover .img-group svg path {
+	fill: #8f9da4 !important;
+}
 </style>
 	<div id="datagroups" class="container">
 	<div class="row pad">
@@ -94,12 +103,12 @@ div#datagroups .pad{
 		</div>
 	
 	</div>
-    <div class="row display-flex center-block">
+    <div class="minjus-container-group row display-flex center-block">
     	{% set dataset_url = h.url_for(controller='package', action='search') %}
     	{%- for group in c.groups -%}
             {%- set can_update = h.check_access('group_update', {'id': c.group_dict.id}) -%}
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 {{ 'with-edit-button' if can_update else '' }}">
-				<div class="panel panel-default with-edit-button">
+        <div class="minjus-group col-lg-4 col-md-4 col-sm-6 col-xs-6 invisble {{ 'with-edit-button' if can_update else '' }}">
+				<div class="minjus panel panel-default with-edit-button">
 				{% if can_update %}
                <a href="{{ h.url_for(controller='group', action='edit', id=group.name) }}">
 						<div class="edit-container">
@@ -112,7 +121,7 @@ div#datagroups .pad{
                     <a href="{{ h.add_url_param(new_params={'groups': group.name}, alternative_url=dataset_url) }}">
             {% endif %}
 					<div class="panel-body">
-						<img class="img-group center-block" src="{{ group.image_display_url }}">
+						<img class="img-group center-block" src="{{ group.image_display_url }}" data-replace="svg">
             <h5>{{ group.display_name }}</h5><!-- {{ group.description }}	-->
 					</div>
 						{% if group.package_count > 0 %}

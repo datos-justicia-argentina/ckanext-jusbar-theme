@@ -1,9 +1,11 @@
 $(function () {
     function replaceSVG(el) {
         var $img = $(el);
+	    console.log('EEEEEEEEEEL: ', el);
         var imgURL = $img.attr('src');
         var imgTitle = $img.data('title');
         var imgClass = $img.attr('class');
+	    console.log('imgclass: ', imgClass);
         var requestParams = {
             url: imgURL,
             method: 'GET',

@@ -1,7 +1,20 @@
 import ckan.logic as logic
 import ckan.lib.helpers as ckan_helpers
+import ckan.plugins as p
 from urlparse import urlparse
 
+
+def get_page_try(page):
+    """wrapper to ckan_helpers get_page_html, if the page is not found
+    this function scapes the error silently."""
+
+    _page = p.toolkit.get_action('ckanext_pages_show')(
+            data_dict={'org_id': None,
+                'page': page})
+    try: 
+        return _page['content']
+    except KeyError as k:
+        raise k
 
 def _get_organizations_objs(organizations_branch, depth=0):
     organizations = []
