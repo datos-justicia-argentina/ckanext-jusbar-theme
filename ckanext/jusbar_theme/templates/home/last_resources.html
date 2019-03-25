@@ -16,29 +16,7 @@ div#noticias .row .novedades-titulo {
 <div class="container" id="noticias">
 <div class="row pad">
 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-<h3>Novedades</h3>
-	<div class="row pad">
-		<div class="col-xs-10 col-sm-6 col-md-6 col-lg-6">
-			<a class="novedades-titulo" href="http://datos.jus.gob.ar/dataset/oralidad-en-los-procesos-civiles/archivo/de4e8278-340d-4190-9f0b-c41292f673d4" target="_blank">
-			Se publica un nuevo dataset de Oralidad en procesos civiles sobre la Provincia de Buenos Aires.</a>
-			<p class="novedades-cuerpo">Novedades de datos.jus.gob.ar, 11 de Diciembre de 2018</p>
-		</div>
-
-		<div class="col-xs-10 col-sm-6 col-md-6 col-lg-6">
-			<a class="novedades-titulo" href="http://datos.jus.gob.ar/dataset/oralidad-en-los-procesos-civiles/archivo/de4e8278-340d-4190-9f0b-c41292f673d4" target="_blank">
-			Se publica un nuevo dataset de Oralidad en procesos civiles sobre la Provincia de Buenos Aires.</a>
-			<p class="novedades-cuerpo">Novedades de datos.jus.gob.ar, 11 de Diciembre de 2018</p>
-		</div>
-		
-		<div class="col-xs-10 col-sm-6 col-md-6 col-lg-6">
-			<a class="novedades-titulo" href="http://datos.jus.gob.ar/blog/garavano-el-sistema-legal-tiene-que-servir-a-los-que-mas-lo-necesitan" target="_blank">Garavano: &quot;El sistema legal tiene que servir a los que m&aacute;s lo necesitan&quot;</a>
-
-			<p class="novedades-cuerpo">Novedades de datos.jus.gob.ar, 16 de agosto de 2018</p>
-		</div>
-		<div class="col-xs-10 col-sm-6 col-md-6 col-lg-6"><a class="novedades-titulo" href="http://www.jus.gob.ar/prensa/noticia.aspx?id=2843" target="_blank">Estad&iacute;stica anual penitenciaria: informe SNEEP 2016</a>
-			<p class="novedades-cuerpo">Novedades de jus.gob.ar, 6 de Diciembre 2017</p>
-		</div>
-	</div>
+	{{ h.get_page_html("novedades")| safe }}
 </div>
 
 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">

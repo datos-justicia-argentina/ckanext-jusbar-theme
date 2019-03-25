@@ -22,7 +22,12 @@ div#tablero .panel {
 
 /* On mouse-over, add a deeper shadow */
 div#tablero .panel:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+/*  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);*/
+	-webkit-box-shadow: 6px 13px 33px 0px rgba(0,0,0,0.38);
+	-moz-box-shadow: 6px 13px 33px 0px rgba(0,0,0,0.38);
+	box-shadow: 6px 13px 33px 0px rgba(0,0,0,0.38);
+
+	-webkit-filter: grayscale(90%); filter: grayscale(90%) !important;
 }
 
 div#tablero .panel-body {
@@ -98,64 +103,64 @@ div#tablero .pad{
 		</div>
 	
 	</div>
-	<div class="row display-flex center-block">
+	<div class="tableros row display-flex center-block">
 		<div class="col-xs-11 col-sm-6 col-md-3 col-lg-3">
 			<div class="panel panel-default">
+          		<a href="pages/justicia-penal">
 				<div class="panel-header text-center">
 					<img src="img/justicia_penal.svg" alt="penal" height="auto" width="auto" class="img-rounded img-responsive center-block">
 				</div>
         <div class="panel-body text-center">
-          <a href="pages/justicia-penal">
 					<h3>Justicia Penal</h3>
           Información sobre procesos penales desagregada por provincia.
-          </a>
       		</div>
+          </a>
 			</div>
 		</div>
 		
 		<div class="col-xs-11 col-sm-6 col-md-3 col-lg-3">
 			<div class="panel panel-default">
-				<div class="panel-header text-center">
-					<img src="img/justicia_civil.svg" alt="civil" height="auto" width="auto" class="img-rounded img-responsive center-block">
-				</div>
-				<div class="panel-body text-center">
           <a href="pages/justicia-civil">
+				<div class="panel-header text-center">
+					<img src="img/justicia_civil.svg" alt="civil" height="auto" width="auto" class="img-rounded img-responsive center-block" data-replace="svg">
+				</div>
+				<div class="panel-body text-center">
           <h3>Justicia Civil</h3>
           Información acerca de procesos civiles en sentido amplio.
-          </a>
       		</div>
+          </a>
 			</div>
 		</div>		
 		
 		<div class="col-xs-11 col-sm-6 col-md-3 col-lg-3">
 			<div class="panel panel-default">
+          <a href="pages/datos-de-justicia-con-perspectiva-de-genero">
 				<div class="panel-header text-center">
 					<img src="img/genero.svg" alt="genero" height="auto" width="auto" class="img-rounded img-responsive center-block">
 				</div>
 				<div class="panel-body text-center">
-          <a href="pages/datos-de-justicia-con-perspectiva-de-genero">
           <h3>Género</h3>
           Sección de datos de Justicia con perspectiva de género
-        </a>
       		</div>
+        </a>
 			</div>
 		</div>		
 			
 		<div class="col-xs-11 col-sm-6 col-md-3 col-lg-3">
 			<div class="panel panel-default">
+          <a href="pages/oralidad">
 				<div class="panel-header text-center">
 					<img src="img/oralidad.svg" alt="oralidad" height="auto" width="auto" class="img-rounded img-responsive center-block">
 				</div>
 				<div class="panel-body text-center">
-          <a href="pages/oralidad">
           <h3>Oralidad</h3>
           Datos sobre oralidad en procesos de conocimiento civiles y comerciales.
-        </a>
       		</div>
+        </a>
 			</div>
 		</div>		
 
 	</div>
 </div>
 
-
+{#% resource 'gobar_js/home/tableros.js' %#}
