@@ -4,6 +4,12 @@
 
 {% block content %}
     {% snippet "static/static_nav_bar.html", active_button='nav-platform', sub_active_button='platform-users' %}
+<div id="page-container" class="container-fluid gobar-static-container">
+  <div id="page" class="col-xs-12 col-md-10 col-md-offset-1 gobar-static">
+  <section class="">
     {{ h.get_page_html("plataforma") | safe }}
+</section>
+</div>
+</div>
 
 {% endblock %}
