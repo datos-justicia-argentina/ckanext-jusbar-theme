@@ -1,0 +1,110 @@
+{% extends "gobar_page.html" %}
+
+{% block subtitle %} - Estadística judicial{% endblock %}
+
+{% block content %}
+    {% snippet "static/static_nav_bar.html", active_button='nav-estadistica', sub_active_button='legal-access' %}
+
+    <div id="ej-container" class="container-fluid gobar-static-container">
+      <div id="ej" class="col-xs-12 col-md-10 col-md-offset-1 gobar-static">
+          <h2>Nuevo Sistema de Datos de la Justicia Argentina</h2>
+
+          <section id="ej-video" class="row">
+
+            <div class="col-sm-6" style="padding-top:1.5%;">
+              <iframe width="100%" height="350" src="https://www.youtube.com/embed/Tc-wR2Utjp8?rel=0" frameborder="0" allowfullscreen></iframe>
+
+            </div><!-- end col -->
+
+            <div class="col-sm-6" >
+              <h3>¿Qué es el Nuevo Sistema de Datos de la Justicia Argentina?</h3>
+                <p>
+                  El Sistema de Datos de la Justicia Argentina reúne 51 instituciones de justicia de todo el país, coordinadas por el Ministerio de Justicia y Derechos Humanos para la publicación de estadísticas judiciales en formatos abiertos y reutilizables. Es resultado del Convenio Interjurisdiccional de Datos Judiciales Abiertos, firmado el 11 de octubre de 2016 en la Casa Rosada. Los datos de los que se componen dichas estadísticas fueron consensuados de forma colectiva por las instituciones firmantes, con el desarrollo de protocolos de datos y de procesos que permiten la organización del trabajo y la unificación de criterios.</p>
+            </div><!-- end col -->
+
+          </section><!-- row -->
+<!--
+          <section id="ej-dataset" class="row" style="padding-top:2%;">
+
+            <div class="col-sm-12">
+              <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <h2>  <a  href="http://datos.jus.gob.ar/dataset/base-de-datos-legislativos-infoleg">
+                    Descargar conjunto de datos
+                  </a></h2>
+                </div>
+                <div class="panel-body bg-light bg-white">
+
+                    <p>
+                      <strong>Nuevo Sistema de Datos de la Justicia Argentina (versión preliminar)</strong>
+                    </p>
+                    <p>
+                      Esta es la versión preliminar de una base registra las causas procesadas por los poderes judiciales y ministerios públicos fiscales de todas las provincias del país. Durante esta etapa se publican datos agregados sin identificadores.
+                    </p>
+                    <p>
+                      <a href="http://datos.jus.gob.ar/dataset/base-de-datos-legislativos-infoleg" class="btn btn-info">Descargar conjunto de datos</a>
+                    </p>
+
+                </div>
+              </div>
+
+            </div>
+
+          </section> -->
+
+
+          <section id="ej-convenio" class="row">
+
+            <div class="col-sm-12" style="padding-top:2%;">
+            <h2>Convenios y Protocolos Interjurisdiccionales</h2>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <h3>  Convenio Interjurisdiccional de Datos Judiciales Abiertos</h3>
+              <a href="https://github.com/datos-justicia-argentina/Convenio-Interjurisdiccional-de-Datos-Abiertos-de-la-Justicia-Argentina/blob/master/Convenio%20Interjurisdiccional%20de%20Datos%20Abiertos%20de%20Justicia.pdf">
+              <img src="/img/convenio_portada.png" alt="Convenio Interjurisdiccional de Datos Judiciales Abiertos - PROTOCOLO TÉCNICO DE DATOS Y PROTOCOLO TÉCNICO DE PROCESOS Versión 1 - 7 de abril de 2017" class="ej-img-button">
+              </a>
+              <p>
+                El presente convenio sienta las bases para el desarrollo del nuevo sistema de datos de justicia de la Argentina. Esta iniciativa se propone la publicación de datos en formatos abiertos sobre el funcionamiento y la composición de poderes judiciales y ministerios públicos de todo el país. Fue firmado por más de 50 instituciones en presencia del Presidente de la Nación, el 11 de octubre de 2016.
+                <br>
+                <a href="https://github.com/datos-justicia-argentina/Convenio-Interjurisdiccional-de-Datos-Judiciales-Abiertos/blob/master/Convenio%20Interjurisdiccional%20de%20Datos%20Abiertos%20de%20Justicia.pdf" class="btn btn-info">
+                  Leer convenio completo
+                </a>
+              </p>
+
+            </div><!-- end col -->
+            <div class="col-sm-12 col-md-6" id="ej-protocolo">
+              <h3>Protocolo de implementación</h3>
+              <a href="https://github.com/datos-justicia-argentina/Protocolo-de-implementacion-Convenio-Interjurisdiccional-de-Datos-Judiciales-Abiertos/blob/master/Protocolo%20de%20Implementaci%C3%B3n%20del%20Convenio%20Interjurisdiccional%20de%20Datos%20Abiertos%20de%20Justicia.pdf">
+              <img src="/img/protocolo_portada.png" alt="Convenio Interjurisdiccional de Datos Judiciales Abiertos - PROTOCOLO TÉCNICO DE DATOS Y PROTOCOLO TÉCNICO DE PROCESOS Versión 1 - 7 de abril de 2017" class="ej-img-button">
+</a>
+
+              <p>
+              El Protocolo Unificado de Datos y Procesos es un documento elaborado en forma conjunta por el Ministerio de Justicia y Derechos Humanos y las instituciones firmantes del Convenio Interjurisdiccional de Datos Judiciales Abiertos. Tiene el propósito de establecer los mecanismos mediante los cuales los poderes judiciales y los ministerios públicos de las provincias compartirán los datos estadísticos que serán publicados en el Portal de Datos de la Justicia Argentina.
+              <a href="https://github.com/datos-justicia-argentina/Protocolo-de-implementacion-Convenio-Interjurisdiccional-de-Datos-Abiertos-de-la-Justicia-Argentina/blob/master/Protocolo%20de%20Implementaci%C3%B3n%20del%20Convenio%20Interjurisdiccional%20de%20Datos%20Abiertos%20de%20Justicia.pdf" class="btn btn-info">
+                Leer protocolo completo
+              </a>
+</p>
+
+            </div><!-- end col -->
+
+
+          </section><!-- row -->
+          <section id="ej-datos" class="row">
+            <div class="col-sm-12">
+              <h2>Análisis Preliminar de Datos</h2>
+              <p>
+                Los gráficos que se muestran a continuación están realizados en base a datos de prueba enviados por los organismos firmantes del Convenio Interjurisdiccional de Datos Judiciales Abiertos. Son un ejemplo de la potencialidad de uso de las estadísticas del nuevo Sistema de Datos de la Justicia Argentina.
+              </p>
+
+            </div>
+
+<div class='tableauPlaceholder' id='viz1506710705811' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Es&#47;Estadsticasjudiciales&#47;PrincipalesproblemasdeseguridadpblicaciudadanaVersinPreliminar&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='2' /> <param name='site_root' value='' /><param name='name' value='Estadsticasjudiciales&#47;PrincipalesproblemasdeseguridadpblicaciudadanaVersinPreliminar' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Es&#47;Estadsticasjudiciales&#47;PrincipalesproblemasdeseguridadpblicaciudadanaVersinPreliminar&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1506710705811');                    var vizElement = divElement.getElementsByTagName('object')[0];
+  vizElement.style.width='100%';vizElement.style.height='700px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+<div style="margin-top: 2em">
+
+</div>
+<div class='tableauPlaceholder' id='viz1506711070299' style='position: relative'><noscript><a href='#'><img alt='Principales etapas del proceso (Versión preliminar) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Es&#47;Estadsticasjudiciales&#47;PrincipalesetapasdelprocesoVersinpreliminar&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='2' /> <param name='site_root' value='' /><param name='name' value='Estadsticasjudiciales&#47;PrincipalesetapasdelprocesoVersinpreliminar' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Es&#47;Estadsticasjudiciales&#47;PrincipalesetapasdelprocesoVersinpreliminar&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1506711070299');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='650px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+          </section>
+      </div>
+    </div>
+{% endblock %}

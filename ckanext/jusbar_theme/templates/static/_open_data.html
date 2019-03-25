@@ -1,0 +1,15 @@
+{% extends "gobar_page.html" %}
+
+{% block subtitle %} - Datos Abiertos{% endblock %}
+
+{% block content %}
+    {% snippet "static/static_nav_bar.html", active_button='nav-data' %}
+<div id="page-container" class="container-fluid gobar-static-container">
+  <div id="page" class="col-xs-12 col-md-10 col-md-offset-1 gobar-static">
+  <section class="">
+    {{ h.get_page_html("datos-abiertos")| safe}}
+</section>
+</div>
+</div>
+    
+{% endblock %}
