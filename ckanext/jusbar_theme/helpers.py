@@ -133,7 +133,7 @@ def _last_resources():
         return response
 
 
-def get_blog_articles(number=4, exclude=None):
+def get_blog_articles(number=8, exclude=None):
     """
     Obtiene las ultimas notas publicadas. es necesario el plugin de pages.
     Taked from https://github.com/ckan/ckanext-pages/blob/master/ckanext/pages/plugin.py
