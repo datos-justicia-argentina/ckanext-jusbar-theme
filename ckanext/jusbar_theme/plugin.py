@@ -31,5 +31,6 @@ class Jusbar_ThemePlugin(plugins.SingletonPlugin):
             'cut_img_path': gobar_helpers.cut_img_path,
             'organizations_with_packages': gobar_helpers.organizations_with_packages,
             'recent_resources': gobar_helpers._last_resources,
-            'prueba_helper': gobar_helpers.prueba_helper
+            'prueba_helper': gobar_helpers.prueba_helper,
+            'get_blog_articles': gobar_helpers.get_blog_articles
         }

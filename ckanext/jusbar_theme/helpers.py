@@ -1,7 +1,9 @@
 import ckan.logic as logic
 import ckan.lib.helpers as ckan_helpers
 import ckan.plugins as p
+import ckan.plugins.toolkit as toolkit
 from urlparse import urlparse
+
 
 
 def get_page_try(page):
@@ -11,7 +13,7 @@ def get_page_try(page):
     _page = p.toolkit.get_action('ckanext_pages_show')(
             data_dict={'org_id': None,
                 'page': page})
-    try: 
+    try:
         return _page['content']
     except KeyError as k:
         raise k
@@ -129,6 +131,27 @@ def _last_resources():
                     pass
 
         return response
+
+
+def get_blog_articles(number=4, exclude=None):
+    """
+    Obtiene las ultimas notas publicadas. es necesario el plugin de pages.
+    Taked from https://github.com/ckan/ckanext-pages/blob/master/ckanext/pages/plugin.py
+    """
+    #import pdb; pdb.set_trace()
+    blog_list = toolkit.get_action('ckanext_pages_list')(
+        None, {'order_publish_date': True, 'private': False,
+               'page_type': 'blog'}
+    )
+    new_list = []
+    for blog in blog_list:
+        if exclude and blog['name'] == exclude:
+            continue
+        new_list.append(blog)
+        if len(new_list) == number:
+            break
+
+    return new_list
 
 def prueba_helper():
     return "esto es un helper de prueba"
