@@ -11,7 +11,14 @@ div#noticias .row .novedades-cuerpo .novedades-titulo {
 }
 div#noticias .row .novedades-titulo {
    font-weight: bold;
-}
+ }
+div#noticias .row .novedades-titulo {
+   font-weight: bold;
+ }
+ div #noticias .spacing {
+   padding-top: 20px;
+ }
+
 </style>
 <div class="container" id="noticias">
 <div class="row pad">
@@ -21,9 +28,9 @@ div#noticias .row .novedades-titulo {
   {% set news = h.get_blog_articles() %}
   {% for blog in news %}
   {% set url = h.url_for(controller='ckanext.pages.controller:PagesController', action='blog_show', page='/' + blog.name) %}
-  <div class="col-xs-11 col-sm-11 col-md-6 col-lg-6">
+  <div class="col-xs-11 col-sm-11 col-md-6 col-lg-6 spacing">
     <a class="novedades-titulo" href="{{ url }}">{{ blog.title }}</a>
-    <small class="date">{{ h.render_datetime(blog.publish_date) }}</small>
+    <p><small class="date">{{ h.render_datetime(blog.publish_date) }}</small></p>
 
 				<!--p class="novedades-cuerpo">{{blog.content|striptags|truncate}}</p-->
 
@@ -40,7 +47,7 @@ div#noticias .row .novedades-titulo {
 			<div class="col-xs-11 col-sm-11 col-md-10 col-lg-10">
 			                    
 				<a class="novedades-titulo" href="{{ h.url_for(controller='package', action='read', id=recent.id) }}">{{ recent.title }}</a>
-				<p class="novedades-cuerpo">{{ recent.modified}}</p>
+        <p class="novedades-cuerpo"><small class="date">{{ h.render_datetime(recent.modified)}}</small></p>
 			</div>
 		{%- endfor -%}
 </div>
