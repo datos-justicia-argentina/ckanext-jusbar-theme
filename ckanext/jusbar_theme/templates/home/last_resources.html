@@ -49,6 +49,7 @@ div#noticias .row .novedades-titulo {
 			<div class="col-xs-11 col-sm-11 col-md-10 col-lg-10">
 			                    
 				<a class="novedades-titulo" href="{{ h.url_for(controller='package', action='read', id=recent.id) }}">{{ recent.title }}</a>
+				<p class="novedades-cuerpo">{{ recent.modified}}</p>
 		
 			</div>
 		{%- endfor -%}
